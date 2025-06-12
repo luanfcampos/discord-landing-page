@@ -1,0 +1,197 @@
+:root {
+  --purple: #5865f2;
+  --black: #23272a;
+  --white: #ffffff;
+  --light-grey: #f6f6f6;
+  --font-title: 'Luckiest Guy', cursive;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: #23272a;
+  background: #fff;
+}
+
+.container {
+  padding: 2rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  background: url('assets/images/HeaderBackground.png') no-repeat center center / cover;
+  color: white;
+  padding: 4rem 1.5rem;
+}
+
+.hero h1 {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  max-width: 300px;
+  line-height: 3.2rem;
+  text-align: left;
+  align-self: start;
+  font-weight: 400;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.3rem 1rem;
+  border-radius: 40px;
+  font-weight: 100;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.btn.white {
+  background: white;
+  color: var(--black);
+}
+
+.btn.dark {
+  background: var(--black);
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section div{
+  max-width: 1024px;
+}
+
+section {
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+section.bg-grey {
+  background-color: var(--light-grey);
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.feature img {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.feature.last h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+    text-align: left;
+    align-self: start;
+  }
+
+.feature.last {
+  background-color: var(--light-grey);
+  flex-direction: column-reverse;
+}
+
+
+footer {
+  background: var(--black);
+  padding: 2rem;
+  text-align: center;
+}
+
+footer img {
+  width: 200px;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btn {
+    width: auto;
+  }
+
+  .hero h1 {
+    text-align: center;
+    align-self: center;
+  }
+
+  .feature {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+  }
+
+  .feature.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .feature.last {
+    max-width: 50%;
+  }
+
+  .feature div {
+    flex: 1;
+  }
+
+  .feature img {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .feature.last img{
+    max-width: 100%;
+  }
+
+  .feature.feature.last h2 {
+    font-size: 40px;
+  }
+
+  .feature.feature.last h2, .feature.feature.last p {
+    text-align: center;
+  }
+}
